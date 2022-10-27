@@ -4,7 +4,7 @@ kind: JobTemplate
 metadata:
   name: jobtemplate-4
 spec:
-  tower_auth_secret: awx-access
+  tower_auth_secret: controller-access-secret
   job_template_name: ExampleJobTemplate4
   job_template_project: Demo Project
   job_template_playbook: hello_world.yml
