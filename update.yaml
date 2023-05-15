@@ -1,4 +1,5 @@
 - name: Patch Servers
+  become: true
   hosts: all
   tasks:
     - name: Patch servers
