@@ -1,0 +1,8 @@
+- name: Patch Servers
+  hosts: all
+  tasks:
+    - name: Patch servers
+      ansible.builtin.yum:
+        name: '*'
+        state: latest
+        
