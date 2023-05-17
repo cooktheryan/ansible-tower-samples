@@ -1,6 +1,6 @@
 - name: Patch Servers
   become: true
-  hosts: dbs 
+  hosts: db
   tasks:
     - name: Patch servers
       ansible.builtin.yum:
