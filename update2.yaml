@@ -1,0 +1,9 @@
+- name: Patch Servers
+  become: true
+  hosts: dbs 
+  tasks:
+    - name: Patch servers
+      ansible.builtin.yum:
+        name: '*'
+        state: latest
+        
