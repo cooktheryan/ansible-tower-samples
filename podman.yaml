@@ -1,0 +1,9 @@
+- name: Podman install
+  become: true
+  hosts: all
+  tasks:
+    - name: Podman install
+      ansible.builtin.yum:
+        name: podman 
+        state: latest
+        
