@@ -1,0 +1,9 @@
+- name: App deploy
+  become: true
+  hosts: processing 
+  tasks:
+    - name: Podman pull
+      shell: "podman pull quay.io/rcook/myapp:latest"
+
+    - name: deploy
+      shell: "podman stop myapp ; podman run -d --name myapp -p 8080:8080 quay.io/rcook/myapp:latest"
