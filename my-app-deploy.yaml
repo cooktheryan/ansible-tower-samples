@@ -6,4 +6,4 @@
       shell: "podman pull quay.io/rcook/myapp:latest"
 
     - name: deploy
-      shell: "podman stop myapp ; podman run -d --name myapp -p 8080:8080 quay.io/rcook/myapp:latest"
+      shell: "podman stop myapp ; podman rm myapp ; podman run -d --name myapp -p 8080:8080 quay.io/rcook/myapp:latest"
